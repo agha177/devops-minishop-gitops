@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: ConfigMap
+metadata: 
+  name: backend-config
+
+data:
+  port: "5000"
+  DB_HOST: "postgres"
+  DB_PORT: "5432"
+  DB_NAME: "minishop"
+  NODE_ENV: "production"
