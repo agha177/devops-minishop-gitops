@@ -11,3 +11,12 @@ replicas:
     count: 1
   - name: frontend
     count: 1
+
+images:
+  - name: minishop-backend
+    newName: 861097501014.dkr.ecr.us-east-1.amazonaws.com/minishop-backend
+    newTag: 646be08
+
+  - name: minishop-frontend
+    newName: 861097501014.dkr.ecr.us-east-1.amazonaws.com/minishop-frontend
+    newTag: 646be08
