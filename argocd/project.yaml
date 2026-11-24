@@ -1,0 +1,16 @@
+apiVersion: argoproj.io/v1alpha1
+kind: AppProject
+metadata:
+  name: minishop
+  namespace: argocd
+spec:
+  description: MiniShop GitOps environments
+
+  sourceRepos:
+    - https://github.com/agha177/devops-minishop-gitops.git
+
+  destinations:
+    - namespace: minishop-dev
+      server: https://kubernetes.default.svc
+    - namespace: minishop-prod
+      server: https://kubernetes.default.svc

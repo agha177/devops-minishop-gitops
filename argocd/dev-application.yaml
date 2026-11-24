@@ -1,0 +1,20 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: minishop-dev
+  namespace: argocd
+spec:
+  project: minishop
+
+  source:
+    repoURL: https://github.com/agha177/devops-minishop-gitops.git
+    targetRevision: main
+    path: k8s/overlays/dev
+
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: minishop-dev
+
+  syncPolicy:
+    syncOptions:
+      - CreateNamespace=true
