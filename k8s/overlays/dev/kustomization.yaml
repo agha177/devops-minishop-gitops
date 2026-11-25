@@ -6,7 +6,6 @@ namespace: minishop-dev
 resources:
   - ../../base
   - serviceaccount.yaml
-  - gitops-test-configmap.yaml
 
 replicas:
   - name: backend
