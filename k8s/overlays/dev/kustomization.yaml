@@ -4,23 +4,23 @@ kind: Kustomization
 namespace: minishop-dev
 
 resources:
-  - ../../base
-  - serviceaccount.yaml
+- ../../base
+- serviceaccount.yaml
 
 replicas:
-  - name: backend
-    count: 1
-  - name: frontend
-    count: 1
+- count: 1
+  name: backend
+- count: 1
+  name: frontend
+
 
 images:
-  - name: minishop-backend
-    newName: 861097501014.dkr.ecr.us-east-1.amazonaws.com/minishop-backend
-    newTag: 646be08
-
-  - name: minishop-frontend
-    newName: 861097501014.dkr.ecr.us-east-1.amazonaws.com/minishop-frontend
-    newTag: 646be08
+- name: minishop-backend
+  newName: 861097501014.dkr.ecr.us-east-1.amazonaws.com/minishop-backend
+  newTag: deee6dc
+- name: minishop-frontend
+  newName: 861097501014.dkr.ecr.us-east-1.amazonaws.com/minishop-frontend
+  newTag: deee6dc
 
 patches:
-  - path: serviceaccount-patch.yaml
+- path: serviceaccount-patch.yaml
