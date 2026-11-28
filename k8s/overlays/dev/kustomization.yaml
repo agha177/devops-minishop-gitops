@@ -17,10 +17,10 @@ replicas:
 images:
 - name: minishop-backend
   newName: 861097501014.dkr.ecr.us-east-1.amazonaws.com/minishop-backend
-  newTag: 10d4272
+  newTag: 4d1693a
 - name: minishop-frontend
   newName: 861097501014.dkr.ecr.us-east-1.amazonaws.com/minishop-frontend
-  newTag: 10d4272
+  newTag: 4d1693a
 
 patches:
 - path: serviceaccount-patch.yaml
